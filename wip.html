@@ -38,11 +38,14 @@ A limited MaLa v2.0 Beta 1 test release is currently targeted for <strong>mid-Se
 <ul>
 <li>Complete rebuild in <strong>Delphi 13</strong> — modern compiler, modern codebase</li>
 <li><strong>Backward compatible by design</strong> — existing v1.74 configs, layouts, and <strong>.mplugin plugins remain fully compatible</strong></li>
+<li>Your existing v1.74 settings are <strong>automatically backed up</strong> before any migration changes are made &mdash; nothing is touched without a safety copy first</li>
 <li>Target platform: <strong>Windows 10 and Windows 11</strong>, including 64-bit Windows; MaLa remains a <strong>32-bit application</strong></li>
 <li>Improved stability and crash resistance throughout</li>
+<li>Works with <strong>current MAME</strong> &mdash; no more "0 games found"; game lists build from any modern MAME <code>-listxml</code> output, old or new, and MaLa detects a MAME version change and offers to rebuild</li>
 <li>Reliable keyboard and joystick focus at startup, when auto-starting with Windows, and after waking from sleep or the screensaver &mdash; no more clicking the window before controls respond</li>
 <li>Full <strong>Unicode support</strong> &mdash; international game titles, including Japanese, now display correctly</li>
 <li>Updated video engine using <strong>FFVCL</strong> &mdash; plays MP4 and other modern formats out of the box, no codec packs or DirectShow hunting required</li>
+<li>Rebuilt audio engine with a new <strong>scrub bar</strong> and playlist export &mdash; track names taken from ID3 tags, fades on by default, and unsupported files are skipped instead of stalling playback</li>
 <li>Native support for <strong>IOWarrior LCD and LED</strong> hardware</li>
 <li>Hardware allocation recovery &mdash; clear or reassign a stale LED/LCD device slot without needing to reconnect the original hardware</li>
 <li>Many more <a href="presets.html">built-in emulator presets</a> added &mdash; setting up a new emulator is now just a couple of clicks</li>
