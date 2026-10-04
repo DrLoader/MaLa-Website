@@ -39,6 +39,7 @@ MaLa v2.0 Beta 1 testing is now underway with an initial group of testers, and t
 <li>Complete rebuild in <strong>Delphi 13</strong> — modern compiler, modern codebase</li>
 <li><strong>Built to be backward compatible</strong> &mdash; your existing v1.74 configs, layouts and <strong>.mplugin plugins</strong> are designed to carry straight over</li>
 <li>Your existing v1.74 settings are <strong>automatically backed up</strong> before any migration changes are made</li>
+<li><strong>Portable install</strong> &mdash; save MaLa's paths relative to its own folder (Options &rarr; Backup &rarr; Paths) so the whole MaLa folder can be moved to another folder or drive and keep working. Your settings are backed up first, and you can switch back to full paths at any time. Paths on other drives are left as they are, and MaLa 1.x can't read relative paths.</li>
 <li>Target platform: <strong>Windows 10 and Windows 11</strong>, including 64-bit Windows; MaLa remains a <strong>32-bit application</strong></li>
 <li>Improved stability and crash resistance throughout</li>
 <li>Works with <strong>current MAME</strong> &mdash; no more "0 games found"; game lists build from any modern MAME <code>-listxml</code> output, old or new, and MaLa detects a MAME version change and offers to rebuild</li>
@@ -63,7 +64,7 @@ MaLa's layouts and gameplay screens are staying visually the same by design &mda
 <img src="images/wip-event-plugins.png" alt="MaLa Options - Event Plugins tab" style="max-width:100%;border:1px solid var(--border);margin-top:1rem;display:block;filter:saturate(.9)" onerror="this.style.display='none'">
 <p style="font-size:.78rem;color:var(--text-dim);margin-bottom:1rem">Options &rarr; Event Plugins: untick a plugin to disable it, and see which events each plugin supports.</p>
 <img src="images/wip-backup-paths.png" alt="MaLa Options - Backup, Paths tab" style="max-width:100%;border:1px solid var(--border);margin-top:1rem;display:block;filter:saturate(.9)" onerror="this.style.display='none'">
-<p style="font-size:.78rem;color:var(--text-dim);margin-bottom:1rem">Options &rarr; Backup &rarr; Paths (in development): choose whether MaLa saves its paths relative to the MaLa folder or in full. Your settings are backed up first, so the change can be undone.</p>
+<p style="font-size:.78rem;color:var(--text-dim);margin-bottom:1rem">Options &rarr; Backup &rarr; Paths: choose whether MaLa saves its paths relative to the MaLa folder or in full. Your settings are backed up first, so the change can be undone.</p>
 <div class="info-box" style="border-color:rgba(0,255,136,.4);background:rgba(0,255,136,.05);margin-top:1.5rem">
 <span class="info-label" style="color:var(--neon-g)">► WHAT'S NEXT</span>
 Planned for 2.0 Final: the rebuilt companion tools, launch buttons in MaLa's Options dialog, and a report of missing artwork and videos. Potentially coming in 2.1: a second-screen LCD marquee panel and multiple languages.
