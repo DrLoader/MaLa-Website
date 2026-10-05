@@ -34,34 +34,42 @@ MaLa v2.0 Beta 1 testing is now underway with an initial group of testers, and t
 
 <div class="version-block" style="border-left-color:var(--neon-g)">
 <div class="version-tag" style="color:var(--neon-g)">MaLa v2.0 &mdash; In Development</div>
-<div class="version-section-label">What's New</div>
+<div class="version-section-label">New Features</div>
 <ul>
-<li>Complete rebuild in <strong>Delphi 13</strong> — modern compiler, modern codebase</li>
+<li><strong>Portable install</strong> &mdash; save MaLa's paths relative to its own folder (Options &rarr; Backup &rarr; Paths) so the whole MaLa folder can be moved to another folder or drive and keep working. Your settings are backed up first, and you can switch back to full paths at any time. Paths on other drives are left as they are, and MaLa 1.x can't read relative paths.</li>
+<li><strong>Choose your look</strong> &mdash; pick a visual style for MaLa's settings screens and dialogs: Windows 10 Dark by default, with Auric, Silver and Cobalt XEMedia to choose from, or switch styles off for the classic look. You'll find it under Options &rarr; GUI &rarr; Display &rarr; Misc (&ldquo;Use modern VCL Style&rdquo;). Changes apply after a restart and need Windows 10 or 11. Your game layouts are never restyled.</li>
+<li><strong>Rotate in one step</strong> &mdash; right-click, then Change orientation, to jump straight to 0&deg;, 90&deg;, 180&deg; or 270&deg;, as well as Switch or Flip.</li>
+<li><strong>Better music</strong> &mdash; a rebuilt audio engine with a new <strong>scrub bar</strong> and playlist export. Track names come from ID3 tags, fades are on by default, and unsupported files are skipped instead of stalling playback.</li>
+<li><strong>Video that just plays</strong> &mdash; the new <strong>FFVCL</strong> video engine plays MP4 and other modern formats out of the box, with no codec packs or DirectShow hunting required.</li>
+<li><strong>Animated GIFs</strong> play smoothly as layout videos, and can now also be used as game preview videos &mdash; name the GIF after the ROM and put it in your videos folder, and MaLa uses it when a game has no AVI or MP4. A GIF is drawn as a solid rectangle, as in 1.x, so design a GIF background to match your layout.</li>
+<li><strong>Emulator presets</strong> &mdash; many more <a href="presets.html">built-in emulator presets</a> added, so setting up a new emulator is now just a couple of clicks.</li>
+<li><strong>Plugin manager</strong> &mdash; Options &rarr; Event Plugins lists every plugin, lets you untick one to disable it, and shows which events each one supports. The updated <a href="plugins.html">plugin API</a> adds an improved event system, with SDK examples for <strong>C++ and Delphi</strong>.</li>
+<li><strong>Redesigned LED editor</strong> &mdash; click a row to light that LED, assign functions inline, and use All On / All Off. If a configured LED or LCD board isn't connected, you can clear or reassign its slot without plugging the original back in. Native support for <strong>IOWarrior LCD and LED</strong> hardware.</li>
+<li><strong>MAME version-change detection</strong> &mdash; point MaLa at a newer or older MAME and it notices, then offers to rebuild your game lists.</li>
+<li><strong>MaLa Control</strong> &mdash; a command-line tool for remote-controlling a running MaLa instance from scripts or automation, including a clean-shutdown-then-force-kill <strong>KILL</strong> command.</li>
+</ul>
+<div class="version-section-label">Compatibility &amp; Reliability</div>
+<ul>
+<li>Complete rebuild in <strong>Delphi 13</strong> &mdash; modern compiler, modern codebase</li>
 <li><strong>Built to be backward compatible</strong> &mdash; your existing v1.74 configs, layouts and <strong>.mplugin plugins</strong> are designed to carry straight over</li>
 <li>Your existing v1.74 settings are <strong>automatically backed up</strong> before any migration changes are made</li>
-<li><strong>Portable install</strong> &mdash; save MaLa's paths relative to its own folder (Options &rarr; Backup &rarr; Paths) so the whole MaLa folder can be moved to another folder or drive and keep working. Your settings are backed up first, and you can switch back to full paths at any time. Paths on other drives are left as they are, and MaLa 1.x can't read relative paths.</li>
 <li>Target platform: <strong>Windows 10 and Windows 11</strong>, including 64-bit Windows; MaLa remains a <strong>32-bit application</strong></li>
+<li>Works with <strong>current MAME</strong> &mdash; no more "0 games found"; game lists build from any modern MAME <code>-listxml</code> output, old or new</li>
 <li>Improved stability and crash resistance throughout</li>
-<li>Works with <strong>current MAME</strong> &mdash; no more "0 games found"; game lists build from any modern MAME <code>-listxml</code> output, old or new, and MaLa detects a MAME version change and offers to rebuild</li>
 <li>Reliable keyboard and joystick focus at startup, when auto-starting with Windows, and after waking from sleep or the screensaver &mdash; no more clicking the window before controls respond</li>
 <li>Full <strong>Unicode support</strong> &mdash; international game titles, including Japanese, now display correctly</li>
-<li>Updated video engine using <strong>FFVCL</strong> &mdash; plays MP4 and other modern formats out of the box, no codec packs or DirectShow hunting required</li>
-<li><strong>Animated GIFs</strong> play smoothly as layout videos, and can now also be used as game preview videos &mdash; name the GIF after the ROM and put it in your videos folder, and MaLa uses it when a game has no AVI or MP4. A GIF is drawn as a solid rectangle, as in 1.x, so design a GIF background to match your layout.</li>
-<li>Rebuilt audio engine with a new <strong>scrub bar</strong> and playlist export &mdash; track names taken from ID3 tags, fades on by default, and unsupported files are skipped instead of stalling playback</li>
-<li>Native support for <strong>IOWarrior LCD and LED</strong> hardware</li>
-<li>Hardware allocation recovery &mdash; clear or reassign a stale LED/LCD device slot without needing to reconnect the original hardware</li>
-<li>Many more <a href="presets.html">built-in emulator presets</a> added &mdash; setting up a new emulator is now just a couple of clicks</li>
-<li>Updated <a href="plugins.html">plugin API</a> with improved event system — SDK examples for <strong>C++ and Delphi</strong></li>
-<li>Modernised UI with <strong>VCL Styles</strong> support</li>
 <li>Companion tools (GameList, Tree, Layout, AttractMode editors) rebuilt and launched directly from MaLa's own Options dialog &mdash; no separate launcher app needed, shipping with the final v2.0 release</li>
-<li>New: <strong>MaLa Control</strong>, a command-line tool for remote-controlling a running MaLa instance from scripts or automation &mdash; including a clean-shutdown-then-force-kill <strong>KILL</strong> command</li>
 </ul>
 <div class="version-section-label">Timeline</div>
 <p style="font-size:.82rem;color:var(--text-dim)">No date has been set for the final v2.0 release. <strong>Beta 1 testing began in September 2026</strong> with an initial group of testers, and is being expanded gradually. Watch this page and the <a href="http://forum.arcadecontrols.com/index.php/board,43.0.html" target="_blank">BYOAC Forum</a> for updates.</p>
 </div><div class="info-box" style="border-color:rgba(0,229,255,.3);background:rgba(0,229,255,.04);margin-top:1.5rem">
 <span class="info-label" style="color:var(--neon-c)">► A FIRST LOOK</span>
-MaLa's layouts and gameplay screens are staying visually the same by design &mdash; your existing layouts will look and feel exactly as they do now. What's actually changing is under the hood, plus the menus and config windows. Here are two of the Options tabs from the current Beta 1 build.
+MaLa's layouts and gameplay screens are staying visually the same by design &mdash; your existing layouts will look and feel exactly as they do now. What's actually changing is under the hood, plus the menus and config windows. Here are some of the new options from the current build.
 </div>
+<img src="images/wip-style-dropdown.png" alt="MaLa Options - GUI, Display, Misc: choose a VCL Style" style="max-width:100%;border:1px solid var(--border);margin-top:1rem;display:block;filter:saturate(.9)" onerror="this.style.display='none'">
+<p style="font-size:.78rem;color:var(--text-dim);margin-bottom:1rem">Options &rarr; GUI &rarr; Display &rarr; Misc: tick &ldquo;Use modern VCL Style&rdquo; and pick a style from the dropdown (restart to apply).</p>
+<img src="images/wip-change-orientation.png" alt="MaLa right-click menu - Change orientation" style="max-width:100%;border:1px solid var(--border);margin-top:1rem;display:block;filter:saturate(.9)" onerror="this.style.display='none'">
+<p style="font-size:.78rem;color:var(--text-dim);margin-bottom:1rem">Right-click &rarr; Change orientation: choose 0&deg;, 90&deg;, 180&deg; or 270&deg; directly, or use Switch / Flip.</p>
 <img src="images/wip-event-plugins.png" alt="MaLa Options - Event Plugins tab" style="max-width:100%;border:1px solid var(--border);margin-top:1rem;display:block;filter:saturate(.9)" onerror="this.style.display='none'">
 <p style="font-size:.78rem;color:var(--text-dim);margin-bottom:1rem">Options &rarr; Event Plugins: untick a plugin to disable it, and see which events each plugin supports.</p>
 <img src="images/wip-backup-paths.png" alt="MaLa Options - Backup, Paths tab" style="max-width:100%;border:1px solid var(--border);margin-top:1rem;display:block;filter:saturate(.9)" onerror="this.style.display='none'">
