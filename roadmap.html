@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MaLa Frontend :: Roadmap</title><link rel="stylesheet" href="style.css?v=6"></head>
+<body><header class="banner-header"><a href="index.html"><img src="images/banner2.png" alt="MaLa — Multi Emulator Front-End :: Arcade Cabinet Software" class="banner-img"></a></header><nav>
+  <div class="nav-inner nav-row1"><a href="index.html">About</a><a href="story.html">Story</a><a href="download.html">Download</a><a href="screenshots.html">Screenshots</a><a href="hardware.html">Hardware</a><a href="layouts.html">Layouts</a><a href="plugins.html">Plugins</a></div>
+  <div class="nav-inner"><a href="presets.html">Emu Presets</a><a href="history.html">History</a><a href="wip.html">WIP</a><a href="docs.html">Support</a><a href="usercabs.html">User Cabs</a><a href="links.html">Links</a><a href="http://forum.arcadecontrols.com/index.php/board,43.0.html" target="_blank">Forum</a></div>
+</nav><div class="wrapper"><aside class="sidebar"><div class="sidebar-section"><div class="sidebar-heading">Note</div><p>Nothing on this page is promised, and there is no set order. It is a list of where MaLa could go next.</p></div><div class="sidebar-section">
+<div class="sidebar-heading">Built With</div>
+<a href="https://www.embarcadero.com/products/delphi/starter/free-download" target="_blank"><img src="images/delphi-logo.png" alt="Embarcadero Delphi" style="width:64px;height:64px;display:block;margin:0 auto .5rem"></a>
+<p style="text-align:center;font-size:.75rem">MaLa is built with <a href="https://www.embarcadero.com/products/delphi/starter/free-download" target="_blank">Embarcadero Delphi</a></p>
+</div></aside><main><h1>Roadmap</h1>
+<p>Where MaLa is today, what is coming very soon, and what could come after that.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;margin:1.25rem 0">
+<div class="info-box" style="border-color:rgba(0,255,136,.4);background:rgba(0,255,136,.05);margin:0"><span class="info-label" style="color:var(--neon-g)">&#9658; AVAILABLE NOW</span><strong style="font-size:.95rem">Stable versions</strong><p style="font-size:.82rem;margin:.5rem 0 0"><a href="download.html">MaLa 1.9</a> for Windows XP and older, and <a href="download.html">MaLa 1.74</a>.</p></div>
+<div class="info-box" style="border-color:rgba(0,229,255,.3);background:rgba(0,229,255,.04);margin:0"><span class="info-label" style="color:var(--neon-c)">&#9658; COMING SOON</span><strong style="font-size:.95rem">MaLa 2.0</strong><p style="font-size:.82rem;margin:.5rem 0 0">A strong, stable foundation for modern Windows 7, 10 and 11. No date has been set yet.</p></div>
+<div class="info-box" style="border-color:rgba(255,221,0,.3);background:rgba(255,221,0,.04);margin:0"><span class="info-label" style="color:var(--neon-y)">&#9658; BEYOND 2.0</span><strong style="font-size:.95rem">New features</strong><p style="font-size:.82rem;margin:.5rem 0 0">Ideas and plans for what comes after the foundation. Nothing is promised.</p></div>
+</div>
+<h2>MaLa 2.0 &mdash; the foundation</h2>
+<p>MaLa 2.0 is a rebuild on a modern compiler. The first release is mostly about stability, bug fixes and a solid base to build on, with a handful of useful extras such as a portable install, visual styles, hiding game lists and an easier way to control MaLa from a script. Your existing configs, layouts and plugins are designed to carry straight over. See the <a href="wip.html">WIP page</a> for the full list and beta testing.</p>
+<p>Also planned for 2.0: the rebuilt companion tools with launch buttons in MaLa&rsquo;s Options, and a report of missing artwork and videos.</p>
+<h2>Beyond 2.0</h2>
+<p>With a stable foundation in place, here is what could come next. These are plans and ideas, not promises, and they are not in any particular order.</p>
+<h3>Potentially coming next</h3>
+<ul>
+<li><strong>More than one screen.</strong> If you have more than one monitor, choose which one MaLa uses as the game screen, and keep another for something of your own choosing: a marquee, a display for controls, or a full-screen picture or video. MaLa would remember each monitor by its own identity, so the screens stay where you put them when Windows renumbers its displays.</li>
+<li><strong>Multiple languages.</strong> German, French and Spanish first, with community translations welcome.</li>
+</ul>
+<h3>Hardware and control</h3>
+<ul>
+<li><strong>USB character LCD support.</strong> Built-in support for USB character LCD displays.</li>
+<li><strong>Stream Deck and scripts.</strong> Already possible in 2.0 &mdash; see below.</li>
+</ul>
+<h3>Games and game lists</h3>
+<ul>
+<li><strong>Auto-quit.</strong> Quit a game automatically after a set time, for example one that has been left idle.</li>
+<li><strong>Run without MAME.</strong> Use MaLa with other emulators and the jukebox only, with no MAME installed.</li>
+<li><strong>Portable game lists</strong> that survive a move to another folder or drive.</li>
+<li><strong>Game name, ROM name, or both,</strong> and a clone fallback when a parent ROM is missing.</li>
+<li><strong>Print or export</strong> a game list.</li>
+<li><strong>Hide lists from MaLa&rsquo;s own menu,</strong> behind an admin input.</li>
+<li><strong>Multiple emulators in one game list,</strong> and several MAME versions side by side.</li>
+<li><strong>Playlists,</strong> horizontal game lists and a windowed mode.</li>
+</ul>
+<h3>Layouts</h3>
+<ul>
+<li>Animation, transparency, auto-scaling and background video in layouts.</li>
+<li>Hi-score display and more game information on screen.</li>
+<li>Word wrap in layout text.</li>
+</ul>
+<h3>MaLa on Linux?</h3>
+<div class="info-box" style="border-color:rgba(0,229,255,.3);background:rgba(0,229,255,.04)">
+<span class="info-label">&#9658; BEING CONSIDERED</span>
+A version of MaLa for Linux is being considered, for example to run on a Raspberry Pi or other low-spec hardware. It would be a separate program designed to use the same file formats, so your game lists and layouts could carry across. There is no decision yet, and feedback will help. <strong>If this interests you, please reach out and tell me what you would run it on.</strong>
+<p style="margin:.7rem 0 0"><a href="mailto:submissions@malafe.net?subject=MaLa%20for%20Linux" class="dl-btn">&#9993; Tell me about it</a></p>
+</div>
+<h2>Using MaLa with a Stream Deck</h2>
+<p>MaLa 2.0 includes <strong>MaLa Control</strong>, a small program that controls a running MaLa without a keyboard, so a Stream Deck button, a script or a shortcut can drive it. For example, this moves to the next game:</p>
+<pre style="background:var(--panel);border:1px solid var(--border);padding:.6rem .8rem;border-radius:4px;overflow-x:auto">MaLaControlCmd.exe NEXT</pre>
+<ol>
+<li>Run <code>MaLaControlCmd.exe --help</code> to see every command and how to write it. Or double-click it for a menu where you can try the commands.</li>
+<li>Pick a command, then point a Stream Deck button at it. If your button cannot pass extra arguments to a program, point it at a shortcut or a small <code>.bat</code> file that holds the command.</li>
+<li>Prefer buttons? <code>MaLaControlGui.exe</code> has the same controls in a small window, and shows whether MaLa is running.</li>
+</ol>
+<p>The commands are one-way: MaLa does not send anything back, so a button cannot tell you whether the command worked.</p>
+<div class="info-box" style="margin-top:1.5rem">
+<span class="info-label">&#9658; TELL ME WHAT YOU WANT</span>
+Got an idea, or something on this list you would like sooner? Email <a href="mailto:submissions@malafe.net?subject=MaLa%20roadmap%20idea">submissions@malafe.net</a>, or add it to the <em>MaLa 2.0+ &ndash; New Feature ideas</em> thread on the BYOAC forum when it is back up. Replies help decide what happens first.
+</div>
+</main><aside class="sidebar sidebar-right"><div class="sidebar-section"><div class="sidebar-heading">About Author</div>
+<p>MaLa was conceived and written by Stefan 'swindus' Windus. Further development by Simon 'Loadman' Loader.</p></div>
+<div class="sidebar-section"><div class="sidebar-heading">See Also</div>
+<p><a href="wip.html">WIP page</a> &mdash; the MaLa 2.0 work in progress.</p>
+<p><a href="download.html">Download</a> &mdash; the stable versions.</p></div></aside></div><footer><div class="footer-brand">MaLa Frontend</div>Copyright &copy; 2006&ndash;2026 Stefan Windus and Simon Loader</footer></body></html>
