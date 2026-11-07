@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MaLa Frontend :: Download</title><link rel="stylesheet" href="style.css?v=6"><style>.dl-columns{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;align-items:stretch}.dl-columns .download-card{margin-bottom:0;display:flex;flex-direction:column}.dl-columns .download-card .dl-btn{margin-top:auto;align-self:flex-start}.dl-col-note{font-size:.78rem;color:var(--text-dim);margin-top:1rem}@media (max-width:900px){.dl-columns{grid-template-columns:1fr}}</style></head><body><header class="banner-header"><a href="index.html"><img src="images/banner2.png" alt="MaLa — Multi Emulator Front-End :: Arcade Cabinet Software" class="banner-img"></a></header><nav>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MaLa Frontend :: Download</title><link rel="stylesheet" href="style.css?v=6"><style>.dl-columns{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;align-items:stretch}.dl-columns .download-card{margin-bottom:0;display:flex;flex-direction:column}.dl-columns .download-card .dl-btn{margin-top:auto;align-self:flex-start}.dl-columns .download-card{position:relative}.dl-columns .download-version,.dl-columns .download-meta{margin-right:4.25rem}.dl-icon{position:absolute;top:1.1rem;right:1.25rem;width:52px;height:52px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 4px currentColor)}.dl-icon .dot{fill:currentColor;stroke:none}.dl-col-note{font-size:.78rem;color:var(--text-dim);margin-top:1rem}@media (max-width:900px){.dl-columns{grid-template-columns:1fr}}</style></head><body><header class="banner-header"><a href="index.html"><img src="images/banner2.png" alt="MaLa — Multi Emulator Front-End :: Arcade Cabinet Software" class="banner-img"></a></header><nav>
   <div class="nav-inner nav-row1"><a href="index.html">About</a><a href="story.html">Story</a><a href="download.html" class="active">Download</a><a href="screenshots.html">Screenshots</a><a href="hardware.html">Hardware</a><a href="layouts.html">Layouts</a><a href="plugins.html">Plugins</a></div>
   <div class="nav-inner"><a href="presets.html">Emu Presets</a><a href="history.html">History</a><a href="wip.html">WIP</a><a href="roadmap.html">Roadmap</a><a href="docs.html">Support</a><a href="usercabs.html">User Cabs</a><a href="links.html">Links</a><a href="http://forum.arcadecontrols.com/index.php/board,43.0.html" target="_blank">Forum</a></div>
 </nav><div class="wrapper"><aside class="sidebar">
@@ -24,19 +24,31 @@
 
 <div class="dl-columns">
 
-<div class="download-card">
+<div class="download-card" style="color:var(--neon-g)">
+<svg class="dl-icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="11" y="6" width="42" height="34" rx="4"/><rect x="16" y="11" width="32" height="23" rx="5"/><path d="M21 17q3-2 7-2" opacity=".6"/><circle cx="47" cy="37" r="1" class="dot"/><path d="M24 40l-2 4h20l-2-4"/><rect x="6" y="44" width="52" height="13" rx="2"/><path d="M12 50h16"/><rect x="38" y="48.5" width="14" height="3" rx="1"/><circle cx="13" cy="54" r=".9" class="dot"/></svg>
 <div class="download-version" style="color:var(--neon-g);font-size:1rem">v1.74</div>
 <div class="download-meta">MaLa v1.74 ⭐ &nbsp;·&nbsp; March 2011 <span style="font-size:.72rem;color:var(--neon-c);margin-left:.5rem">[Full package]</span></div>
 <p style="font-size:.82rem;color:var(--text-dim);margin-bottom:.75rem">Last formally released version before the long development hiatus. Includes all companion tools and DLLs.</p>
 <a href="https://github.com/DrLoader/MaLa-Releases/releases/tag/v1.74" target="_blank" class="dl-btn">▼ Download from GitHub</a>
 </div>
 
-<div class="download-card beta">
+<div class="download-card beta" style="color:var(--neon-y)">
+<svg class="dl-icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="11" y="6" width="42" height="34" rx="4"/><rect x="16" y="11" width="32" height="23" rx="5"/><path d="M21 17q3-2 7-2" opacity=".6"/><circle cx="47" cy="37" r="1" class="dot"/><path d="M24 40l-2 4h20l-2-4"/><rect x="6" y="44" width="52" height="13" rx="2"/><path d="M12 50h16"/><rect x="38" y="48.5" width="14" height="3" rx="1"/><circle cx="13" cy="54" r=".9" class="dot"/></svg>
 <div class="download-version" style="color:var(--neon-y);font-size:1rem">v1.91</div>
 <div class="download-meta">MaLa v1.9 &nbsp;·&nbsp; October 2026 <span style="font-size:.72rem;color:var(--neon-c);margin-left:.5rem">[Windows XP and older]</span></div>
 <p style="font-size:.82rem;color:var(--text-dim);margin-bottom:.75rem">The final version of the original MaLa 1.x line, for cabinets running Windows XP and older. Stability fixes only &mdash; focus, crashes, settings saving, MAME game lists, music and preview videos &mdash; and no new features. Tested on Windows XP SP2 and Windows ME. Please read the Read Me in the download before upgrading.</p>
 <a href="https://github.com/DrLoader/MaLa-Releases/releases/tag/v1.91" target="_blank" class="dl-btn beta-btn">&#9660; Download from GitHub</a>
 </div>
+
+<!-- MaLa 2.0 card: at release, replace the v1.74 card above with this block and put in the real download link.
+<div class="download-card" style="color:var(--neon-c);border-top-color:var(--neon-c)">
+<svg class="dl-icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="10" width="56" height="34" rx="2"/><rect x="8" y="14" width="48" height="26" rx="1" stroke-width="1.2" opacity=".55"/><path d="M14 34l9-9 6 6 5-5 9 9" stroke-width="1.6" opacity=".8"/><circle cx="44" cy="21" r="2.2" stroke-width="1.6" opacity=".8"/><path d="M29 44l-2 9M35 44l2 9"/><path d="M20 54h24"/></svg>
+<div class="download-version" style="color:var(--neon-c);font-size:1rem">v2.0</div>
+<div class="download-meta">MaLa v2.0 &nbsp;·&nbsp; RELEASE DATE <span style="font-size:.72rem;color:var(--neon-c);margin-left:.5rem">[Windows 10 and 11]</span></div>
+<p style="font-size:.82rem;color:var(--text-dim);margin-bottom:.75rem">DESCRIPTION</p>
+<a href="RELEASE LINK" target="_blank" class="dl-btn" style="border-color:var(--neon-c);color:var(--neon-c)">&#9660; Download from GitHub</a>
+</div>
+-->
 
 </div>
 
