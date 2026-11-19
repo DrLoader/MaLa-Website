@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MaLa Frontend :: Getting Started</title><link rel="stylesheet" href="style.css?v=6">
+<style>
+.cmd-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.82rem}
+.cmd-table td,.cmd-table th{padding:.4rem .7rem;border:1px solid var(--border);color:var(--text)}
+.cmd-table th{background:var(--panel);color:var(--neon-c);font-family:'Orbitron',sans-serif;font-size:.7rem;text-align:left}
+.cmd-table tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+.gs-pre{background:var(--panel);border:1px solid var(--border);padding:.6rem .8rem;border-radius:4px;overflow-x:auto;margin:.5rem 0 .8rem}
+main ol li,main ul li{margin-bottom:.4rem}
+@media (max-width:700px){main,aside{min-width:0}.cmd-table{display:block;overflow-x:auto}}
+</style></head>
+<body><header class="banner-header"><a href="index.html"><img src="images/banner2.png" alt="MaLa — Multi Emulator Front-End :: Arcade Cabinet Software" class="banner-img"></a></header><nav>
+  <div class="nav-inner nav-row1"><a href="index.html">About</a><a href="story.html">Story</a><a href="download.html">Download</a><a href="getting-started.html" class="active">Getting Started</a><a href="screenshots.html">Screenshots</a><a href="hardware.html">Hardware</a><a href="layouts.html">Layouts</a><a href="plugins.html">Plugins</a></div>
+  <div class="nav-inner"><a href="presets.html">Emu Presets</a><a href="history.html">History</a><a href="wip.html">WIP</a><a href="roadmap.html">Roadmap</a><a href="docs.html">Support</a><a href="usercabs.html">User Cabs</a><a href="links.html">Links</a><a href="https://forum.arcadecontrols.com/" data-was="http://forum.arcadecontrols.com/index.php/board,43.0.html" target="_blank">Forum</a></div>
+</nav><div class="wrapper"><aside class="sidebar"><div class="sidebar-section"><div class="sidebar-heading">On This Page</div>
+<p><a href="#step1">1. Get MAME working</a><br><a href="#step2">2. Install MaLa</a><br><a href="#step3">3. Point MaLa at MAME</a><br><a href="#step4">4. Play</a><br><a href="#step5">5. Pictures and videos</a><br><a href="#other-emulators">Other emulators</a><br><a href="#stuck">Stuck?</a></p></div><div class="sidebar-section">
+<div class="sidebar-heading">Built With</div>
+<a href="https://www.embarcadero.com/products/delphi/starter" target="_blank"><img src="images/delphi-logo.png" alt="Embarcadero Delphi" style="width:64px;height:64px;display:block;margin:0 auto .5rem"></a>
+<p style="text-align:center;font-size:.75rem">MaLa is built with <a href="https://www.embarcadero.com/products/delphi/starter" target="_blank">Embarcadero Delphi</a></p>
+</div></aside><main><h1>Getting started with MaLa</h1>
+<div class="info-box" style="border-color:rgba(0,255,136,.4);background:rgba(0,255,136,.05)">
+<span class="info-label" style="color:var(--neon-g)">&#9658; READ THIS FIRST</span>
+MaLa doesn&rsquo;t play games itself: MAME does. <strong>Get MAME running a game on its own first, then point MaLa at it.</strong> Most people who get stuck skipped that first step.
+</div>
+<p>This page takes a new user from nothing to a game list in about 15 minutes. Already used MaLa 1.x? Follow the Read Me First in the download instead: it covers upgrading a copy of your old folder.</p>
+
+<h2 id="step1">Step 1: get MAME working on its own</h2>
+<p>You need three things before MaLa can do anything.</p>
+<ol>
+<li><strong>Windows 10 or 11.</strong> Most of MaLa runs on Windows 7, but it isn&rsquo;t supported there. On Windows XP, use <a href="download.html">MaLa 1.9</a> instead.</li>
+<li><strong>MAME</strong>, from <a href="https://www.mamedev.org" target="_blank">mamedev.org</a>, extracted into its own folder, for example <code>C:\MAME</code>.</li>
+<li><strong>Your ROMs</strong> in MAME&rsquo;s <code>roms</code> folder (<code>C:\MAME\roms</code>), as <code>.zip</code> files. ROM sets are tied to MAME versions: ROMs made for a much older MAME often won&rsquo;t run in a new one.</li>
+</ol>
+<p><strong>Check it before going on.</strong> Open a command prompt in <code>C:\MAME</code> and type <code>mame pacman</code>, using any game you have. The game should start. If it doesn&rsquo;t, MaLa can&rsquo;t fix that: sort out MAME first. The MAME documentation and forums are the place for that.</p>
+
+<h2 id="step2">Step 2: install MaLa</h2>
+<ol>
+<li>Download the MaLa zip from the <a href="download.html">Download page</a>.</li>
+<li>Before you extract it, right-click the zip, choose <strong>Properties</strong>, tick <strong>Unblock</strong> if it&rsquo;s there, then OK. This stops Windows warning about every file inside.</li>
+<li>Extract the zip. Inside is a folder called <code>MaLa2_00</code>: copy <strong>everything in it</strong> into a new folder of its own, for example <code>C:\MaLa</code>. Don&rsquo;t use <code>Program Files</code>, because MaLa saves its settings in its own folder.</li>
+<li>Start <code>MaLa.exe</code>. If Windows says &ldquo;Windows protected your PC&rdquo;, click <strong>More info</strong>, then <strong>Run anyway</strong>. MaLa isn&rsquo;t code-signed, so Windows doesn&rsquo;t recognise it yet. Your antivirus may also ask once.</li>
+</ol>
+<p>The first time it starts, MaLa shows a short welcome and a What&rsquo;s New window. Close them with any key.</p>
+
+<h2 id="step3">Step 3: point MaLa at MAME</h2>
+<p>MaLa needs to know three things: where <code>mame.exe</code> is, where your ROMs are, and MAME&rsquo;s own list of games (a file called <code>mame.xml</code>, which MaLa makes for you). Use a mouse and keyboard for this part; the joystick is for playing.</p>
+<ol>
+<li><strong>Open Options.</strong> On the very first start MaLa says &ldquo;This is your first start of MaLa&rdquo; and opens Options by itself. Later, right-click anywhere in MaLa and choose <strong>Options</strong>.</li>
+<li>Go to the <strong>MAME Config</strong> tab, <strong>Basics</strong>. Beside <strong>MAME executable</strong>, click <strong>...</strong> and pick <code>C:\MAME\mame.exe</code>. MaLa tells you which MAME it found.</li>
+<li>MaLa offers to create <code>mame.xml</code>, MAME&rsquo;s list of every game it knows. Say <strong>Yes</strong>: it takes a minute or two with a modern MAME, and the <strong>Rom info file (XML)</strong> box fills in. If it didn&rsquo;t ask, click <strong>Create</strong> beside that box.</li>
+<li>Beside <strong>Rom path</strong>, click <strong>...</strong> and pick <code>C:\MAME\roms</code>. If a note about relative paths appears, click OK.</li>
+<li>Click <strong>OK</strong>. MaLa asks &ldquo;Your configuration has changed! Refresh main game list?&rdquo;. Say <strong>Yes</strong>: it builds <strong>All Games</strong> from the games whose ROMs it finds in your ROM folder.</li>
+</ol>
+<p>You should now see a list of your games. If the list is empty, see <a href="#stuck">Stuck?</a> below.</p>
+
+<h2 id="step4">Step 4: play</h2>
+<p>The keyboard keys MaLa uses out of the box; all of them can be changed in Options.</p>
+<table class="cmd-table"><tr><th>Key</th><th>Does</th></tr>
+<tr><td>Up / Down arrows</td><td>Move through the game list</td></tr>
+<tr><td>Left / Right arrows</td><td>Previous / next game list</td></tr>
+<tr><td>1</td><td>Start the selected game</td></tr>
+<tr><td>2</td><td>Open the MaLa menu</td></tr>
+<tr><td>Esc</td><td>Exit MaLa (it asks you to confirm)</td></tr>
+</table>
+<p>To leave a game, use MAME&rsquo;s own exit key (Esc by default). MaLa comes back with the game list where you left it.</p>
+<p><strong>Joystick or arcade controls:</strong> set them up in Options under the joystick and controller settings. A keyboard encoder (I-PAC and similar) sends keys, so it works with the table above as it is.</p>
+
+<h2 id="step5">Step 5: add pictures and videos (optional)</h2>
+<p>MaLa shows a screenshot, marquee, control panel picture and preview video for each game when you have them. Nothing breaks without them.</p>
+<ul>
+<li>In Options, <strong>MAME Config</strong> tab, <strong>Pictures and Videos</strong>: set the folders for <strong>Snap / Title</strong>, <strong>Marquee Pic</strong>, <strong>Control Panel Pic</strong> and <strong>Attract videos</strong>.</li>
+<li>Name each file after the game&rsquo;s ROM name: <code>pacman.png</code>, <code>pacman.mp4</code>. Videos can be <code>.avi</code>, <code>.mp4</code> or animated <code>.gif</code>, with no codec packs needed.</li>
+<li>Ready-made sets are available from sites such as <a href="https://www.progettosnaps.net" target="_blank">Progetto-SNAPS</a> and <a href="http://adb.arcadeitalia.net" target="_blank">Arcade Database</a>.</li>
+</ul>
+<p>No pictures or videos showing? Check that <strong>Show pictures</strong> and <strong>Show videos</strong> are ticked in Options; Options says beside the folders when they&rsquo;re off.</p>
+
+<h2 id="other-emulators">Other emulators</h2>
+<p>MaLa can launch almost any emulator, but <strong>you need to know how to start a game in that emulator from the command line first</strong>, with whatever options it needs. MaLa passes that same command for you; it can&rsquo;t work it out for you.</p>
+<p><strong>Example: the Atari 2600 emulator Stella</strong>, with Stella in <code>C:\Emulators\Stella</code> and games in <code>C:\Games\Atari2600</code>.</p>
+<ol>
+<li><strong>Test it on its own first.</strong> Open a command prompt and run one game:
+<pre class="gs-pre">"C:\Emulators\Stella\Stella.exe" "C:\Games\Atari2600\Thrust.bin"</pre>
+The game should start. If it doesn&rsquo;t, fix that before going near MaLa.</li>
+<li>In Options, go to the <strong>Other Emu Config</strong> tab and click <strong>New</strong> under the emulator list.</li>
+<li>On <strong>Basics</strong>, fill in:
+<ul>
+<li><strong>Name:</strong> <code>Atari 2600</code></li>
+<li><strong>Executable:</strong> <code>C:\Emulators\Stella\Stella.exe</code> (the <strong>...</strong> button browses)</li>
+<li><strong>Rom path:</strong> <code>C:\Games\Atari2600</code></li>
+<li><strong>Rom extensions (separated by comma):</strong> <code>bin,a26</code></li>
+</ul></li>
+<li>On <strong>Execution</strong>, the <strong>Command line</strong> is everything after the program name in your test. MaLa fills in the game for you: <code>%path%</code> is the ROM folder, <code>%rom%</code> the file name and <code>%ext%</code> its extension. For Stella the default is already right: <code>"%path%\%rom%.%ext%"</code>.</li>
+<li><strong>Presets</strong> fills in the command line for 63 common emulators; change it to match your test if yours differs.</li>
+<li>Click <strong>OK</strong>, then switch to the new emulator in MaLa and start a game.</li>
+</ol>
+<p>MAME gets full help on this site. For other emulators, help is with plugging a working command into MaLa, not with setting up the emulator itself.</p>
+
+<h2 id="stuck">Stuck?</h2>
+<table class="cmd-table"><tr><th>What you see</th><th>What to do</th></tr>
+<tr><td>&ldquo;Mame XML file not set!&rdquo;</td><td>MaLa doesn&rsquo;t know where MAME is yet: <a href="#step3">Step 3</a>.</td></tr>
+<tr><td>The game list is empty</td><td>Check the ROM folder in Options (<a href="#step3">Step 3</a>), and that your ROMs match your MAME version (<a href="#step1">Step 1</a>). By default MaLa lists only games MAME marks as working; untick that in Options to see the rest.</td></tr>
+<tr><td>A game starts, then MaLa comes straight back</td><td>Run the same game in MAME on its own (<a href="#step1">Step 1</a>). If MAME can&rsquo;t run it, MaLa can&rsquo;t either.</td></tr>
+<tr><td>&ldquo;Windows protected your PC&rdquo;</td><td>More info, then Run anyway (<a href="#step2">Step 2</a>).</td></tr>
+<tr><td>No pictures or videos</td><td>Folders and file names: <a href="#step5">Step 5</a>.</td></tr>
+<tr><td>MaLa locks up or closes</td><td>Send the log (below).</td></tr>
+</table>
+<div class="info-box" style="margin-top:1.25rem">
+<span class="info-label">&#9658; STILL STUCK? SEND ME THE LOG</span>
+MaLa writes <code>MaLa.log</code> in its own folder. Email it to <a href="mailto:malatesters@malafe.net">malatesters@malafe.net</a> with a line on what you tried. I read every one.
+<p style="margin:.6rem 0 0">&mdash; Loadman</p>
+</div>
+</main><aside class="sidebar sidebar-right"><div class="sidebar-section"><div class="sidebar-heading">MaLa Status</div>
+<p><span style="color:var(--neon-c)">Beta:</span> <a href="download.html#beta">v2.0 beta</a> (Windows 10 and 11). No date yet for the final release.</p>
+<p><span style="color:var(--neon-g)">Stable:</span> <a href="download.html">v1.9</a> (Windows XP and older).</p>
+<p><a href="roadmap.html">Roadmap &rarr;</a></p></div>
+</aside></div><footer><div class="footer-brand">MaLa Frontend</div>Copyright &copy; 2006&ndash;2026 Stefan Windus and Simon Loader</footer></body></html>
